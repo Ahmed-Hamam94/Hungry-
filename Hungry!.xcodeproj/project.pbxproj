@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		915D0656074158025B5FCD00 /* Pods_Hungry_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 662F66DEE2FA62D9786130AD /* Pods_Hungry_Tests.framework */; };
+		B74A4315D768386D355EE905 /* Pods_Hungry__Hungry_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E610D5A44814026FA74DD4F0 /* Pods_Hungry__Hungry_UITests.framework */; };
+		E044E92C73A7FCB5E5102EB7 /* Pods_Hungry_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68AC5B4330C0BD6B96DF2466 /* Pods_Hungry_.framework */; };
 		F74956D529C76FAD009B8CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74956D429C76FAD009B8CA7 /* AppDelegate.swift */; };
 		F74956D729C76FAD009B8CA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74956D629C76FAD009B8CA7 /* SceneDelegate.swift */; };
 		F74956DC29C76FAD009B8CA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74956DA29C76FAD009B8CA7 /* Main.storyboard */; };
@@ -29,6 +32,19 @@
 		F749571729C78347009B8CA7 /* OnBoardingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F749571329C78347009B8CA7 /* OnBoardingCollectionViewCell.xib */; };
 		F77419E329C7DC3500EB983B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77419E129C7DC3500EB983B /* HomeViewController.swift */; };
 		F77419E429C7DC3500EB983B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77419E129C7DC3500EB983B /* HomeViewController.swift */; };
+		F7C184C229C8D55A0060617D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C184C129C8D55A0060617D /* HomeViewModel.swift */; };
+		F7C184C429C8D9B40060617D /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C184C329C8D9B40060617D /* UICollectionView+extension.swift */; };
+		F7C184C729C8DE9D0060617D /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C184C529C8DE9D0060617D /* PopularCollectionViewCell.swift */; };
+		F7C184C829C8DE9D0060617D /* PopularCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C184C629C8DE9D0060617D /* PopularCollectionViewCell.xib */; };
+		F7C184CA29C8E4F20060617D /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C184C929C8E4F20060617D /* Dish.swift */; };
+		F7C184CD29C909E60060617D /* ChefCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C184CB29C909E60060617D /* ChefCollectionViewCell.swift */; };
+		F7C184CE29C909E60060617D /* ChefCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C184CC29C909E60060617D /* ChefCollectionViewCell.xib */; };
+		F7C92C8329C8096500F4E424 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C92C8129C8096500F4E424 /* CategoryCollectionViewCell.swift */; };
+		F7C92C8429C8096500F4E424 /* CategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7C92C8229C8096500F4E424 /* CategoryCollectionViewCell.xib */; };
+		F7C92C8529C8097500F4E424 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C92C8129C8096500F4E424 /* CategoryCollectionViewCell.swift */; };
+		F7C92C8829C80D7000F4E424 /* DishCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C92C8729C80D7000F4E424 /* DishCategory.swift */; };
+		F7C92C8A29C80E0500F4E424 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C92C8929C80E0500F4E424 /* String+extension.swift */; };
+		F7C92C8C29C817CC00F4E424 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C92C8B29C817CC00F4E424 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0527FCB08790E9FB3D11476A /* Pods-Hungry!-Hungry!UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!-Hungry!UITests.debug.xcconfig"; path = "Target Support Files/Pods-Hungry!-Hungry!UITests/Pods-Hungry!-Hungry!UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		45634BE8BB38886E1C199451 /* Pods-Hungry!Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!Tests.release.xcconfig"; path = "Target Support Files/Pods-Hungry!Tests/Pods-Hungry!Tests.release.xcconfig"; sourceTree = "<group>"; };
+		662F66DEE2FA62D9786130AD /* Pods_Hungry_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hungry_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		68AC5B4330C0BD6B96DF2466 /* Pods_Hungry_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hungry_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74AF1CC0884A15602EE84CD1 /* Pods-Hungry!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!.release.xcconfig"; path = "Target Support Files/Pods-Hungry!/Pods-Hungry!.release.xcconfig"; sourceTree = "<group>"; };
+		A7717E254FB5AA5D9B94708E /* Pods-Hungry!Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!Tests.debug.xcconfig"; path = "Target Support Files/Pods-Hungry!Tests/Pods-Hungry!Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AEE02F8701F45AB11480BEBB /* Pods-Hungry!-Hungry!UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!-Hungry!UITests.release.xcconfig"; path = "Target Support Files/Pods-Hungry!-Hungry!UITests/Pods-Hungry!-Hungry!UITests.release.xcconfig"; sourceTree = "<group>"; };
+		E610D5A44814026FA74DD4F0 /* Pods_Hungry__Hungry_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hungry__Hungry_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E91AED09EB676FB3F82E467B /* Pods-Hungry!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hungry!.debug.xcconfig"; path = "Target Support Files/Pods-Hungry!/Pods-Hungry!.debug.xcconfig"; sourceTree = "<group>"; };
 		F74956D129C76FAD009B8CA7 /* Hungry!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hungry!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74956D429C76FAD009B8CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F74956D629C76FAD009B8CA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +93,18 @@
 		F749571229C78347009B8CA7 /* OnBoardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		F749571329C78347009B8CA7 /* OnBoardingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingCollectionViewCell.xib; sourceTree = "<group>"; };
 		F77419E129C7DC3500EB983B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F7C184C129C8D55A0060617D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F7C184C329C8D9B40060617D /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		F7C184C529C8DE9D0060617D /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7C184C629C8DE9D0060617D /* PopularCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopularCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C184C929C8E4F20060617D /* Dish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		F7C184CB29C909E60060617D /* ChefCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7C184CC29C909E60060617D /* ChefCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChefCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C92C8129C8096500F4E424 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F7C92C8229C8096500F4E424 /* CategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		F7C92C8729C80D7000F4E424 /* DishCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCategory.swift; sourceTree = "<group>"; };
+		F7C92C8929C80E0500F4E424 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
+		F7C92C8B29C817CC00F4E424 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E044E92C73A7FCB5E5102EB7 /* Pods_Hungry_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				915D0656074158025B5FCD00 /* Pods_Hungry_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +128,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B74A4315D768386D355EE905 /* Pods_Hungry__Hungry_UITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4368E857DB194ED77FBB1E42 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E91AED09EB676FB3F82E467B /* Pods-Hungry!.debug.xcconfig */,
+				74AF1CC0884A15602EE84CD1 /* Pods-Hungry!.release.xcconfig */,
+				0527FCB08790E9FB3D11476A /* Pods-Hungry!-Hungry!UITests.debug.xcconfig */,
+				AEE02F8701F45AB11480BEBB /* Pods-Hungry!-Hungry!UITests.release.xcconfig */,
+				A7717E254FB5AA5D9B94708E /* Pods-Hungry!Tests.debug.xcconfig */,
+				45634BE8BB38886E1C199451 /* Pods-Hungry!Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A463C6A25345C84A93D5309D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				68AC5B4330C0BD6B96DF2466 /* Pods_Hungry_.framework */,
+				E610D5A44814026FA74DD4F0 /* Pods_Hungry__Hungry_UITests.framework */,
+				662F66DEE2FA62D9786130AD /* Pods_Hungry_Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F74956C829C76FAD009B8CA7 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +165,8 @@
 				F74956EA29C76FAF009B8CA7 /* Hungry!Tests */,
 				F74956F429C76FAF009B8CA7 /* Hungry!UITests */,
 				F74956D229C76FAD009B8CA7 /* Products */,
+				4368E857DB194ED77FBB1E42 /* Pods */,
+				A463C6A25345C84A93D5309D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,19 +183,14 @@
 		F74956D329C76FAD009B8CA7 /* Hungry! */ = {
 			isa = PBXGroup;
 			children = (
+				F77419E829C806E800EB983B /* Module */,
+				F77419E729C806C800EB983B /* View */,
 				F749570829C77EB8009B8CA7 /* Extensions */,
 				F749570429C77748009B8CA7 /* Models */,
 				F74956D429C76FAD009B8CA7 /* AppDelegate.swift */,
 				F74956D629C76FAD009B8CA7 /* SceneDelegate.swift */,
-				F74956DA29C76FAD009B8CA7 /* Main.storyboard */,
 				F74956DD29C76FAE009B8CA7 /* Assets.xcassets */,
-				F74956DF29C76FAE009B8CA7 /* LaunchScreen.storyboard */,
 				F74956E229C76FAE009B8CA7 /* Info.plist */,
-				F749570529C777C4009B8CA7 /* OnBoardingViewController.swift */,
-				F749570F29C78131009B8CA7 /* OnBoardingViewModel.swift */,
-				F749571229C78347009B8CA7 /* OnBoardingCollectionViewCell.swift */,
-				F749571329C78347009B8CA7 /* OnBoardingCollectionViewCell.xib */,
-				F77419E129C7DC3500EB983B /* HomeViewController.swift */,
 			);
 			path = "Hungry!";
 			sourceTree = "<group>";
@@ -164,8 +224,97 @@
 			isa = PBXGroup;
 			children = (
 				F749570929C77EE8009B8CA7 /* UIView+extension.swift */,
+				F7C92C8929C80E0500F4E424 /* String+extension.swift */,
+				F7C184C329C8D9B40060617D /* UICollectionView+extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F77419E729C806C800EB983B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F74956DA29C76FAD009B8CA7 /* Main.storyboard */,
+				F74956DF29C76FAE009B8CA7 /* LaunchScreen.storyboard */,
+				F7C92C8B29C817CC00F4E424 /* ShadowView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F77419E829C806E800EB983B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				F77419EC29C8076000EB983B /* Home */,
+				F77419E929C806FD00EB983B /* OnBoarding */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		F77419E929C806FD00EB983B /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				F77419EB29C8071E00EB983B /* ViewModel */,
+				F77419EA29C8071300EB983B /* View */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		F77419EA29C8071300EB983B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F749570529C777C4009B8CA7 /* OnBoardingViewController.swift */,
+				F749571229C78347009B8CA7 /* OnBoardingCollectionViewCell.swift */,
+				F749571329C78347009B8CA7 /* OnBoardingCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F77419EB29C8071E00EB983B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F749570F29C78131009B8CA7 /* OnBoardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F77419EC29C8076000EB983B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F7C184C029C8D53D0060617D /* ViewModel */,
+				F7C92C8629C80D5E00F4E424 /* Model */,
+				F77419ED29C8076C00EB983B /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F77419ED29C8076C00EB983B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F77419E129C7DC3500EB983B /* HomeViewController.swift */,
+				F7C92C8129C8096500F4E424 /* CategoryCollectionViewCell.swift */,
+				F7C92C8229C8096500F4E424 /* CategoryCollectionViewCell.xib */,
+				F7C184C529C8DE9D0060617D /* PopularCollectionViewCell.swift */,
+				F7C184C629C8DE9D0060617D /* PopularCollectionViewCell.xib */,
+				F7C184CB29C909E60060617D /* ChefCollectionViewCell.swift */,
+				F7C184CC29C909E60060617D /* ChefCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F7C184C029C8D53D0060617D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F7C184C129C8D55A0060617D /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F7C92C8629C80D5E00F4E424 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F7C92C8729C80D7000F4E424 /* DishCategory.swift */,
+				F7C184C929C8E4F20060617D /* Dish.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +324,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74956FB29C76FAF009B8CA7 /* Build configuration list for PBXNativeTarget "Hungry!" */;
 			buildPhases = (
+				477E0EB4414213B5DF7D153B /* [CP] Check Pods Manifest.lock */,
 				F74956CD29C76FAD009B8CA7 /* Sources */,
 				F74956CE29C76FAD009B8CA7 /* Frameworks */,
 				F74956CF29C76FAD009B8CA7 /* Resources */,
+				FEE3D08B4C9561601878D2DC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +343,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74956FE29C76FAF009B8CA7 /* Build configuration list for PBXNativeTarget "Hungry!Tests" */;
 			buildPhases = (
+				F32254EB2FCA8FDC9FB9998A /* [CP] Check Pods Manifest.lock */,
 				F74956E329C76FAF009B8CA7 /* Sources */,
 				F74956E429C76FAF009B8CA7 /* Frameworks */,
 				F74956E529C76FAF009B8CA7 /* Resources */,
@@ -210,9 +362,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F749570129C76FAF009B8CA7 /* Build configuration list for PBXNativeTarget "Hungry!UITests" */;
 			buildPhases = (
+				468F143DFDC90CA8267A789A /* [CP] Check Pods Manifest.lock */,
 				F74956ED29C76FAF009B8CA7 /* Sources */,
 				F74956EE29C76FAF009B8CA7 /* Frameworks */,
 				F74956EF29C76FAF009B8CA7 /* Resources */,
+				9085F656897E410C676BA84C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -273,8 +427,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				F74956E129C76FAE009B8CA7 /* LaunchScreen.storyboard in Resources */,
+				F7C92C8429C8096500F4E424 /* CategoryCollectionViewCell.xib in Resources */,
 				F74956DE29C76FAE009B8CA7 /* Assets.xcassets in Resources */,
+				F7C184CE29C909E60060617D /* ChefCollectionViewCell.xib in Resources */,
 				F749571629C78347009B8CA7 /* OnBoardingCollectionViewCell.xib in Resources */,
+				F7C184C829C8DE9D0060617D /* PopularCollectionViewCell.xib in Resources */,
 				F74956DC29C76FAD009B8CA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,17 +453,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		468F143DFDC90CA8267A789A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hungry!-Hungry!UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		477E0EB4414213B5DF7D153B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hungry!-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9085F656897E410C676BA84C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hungry!-Hungry!UITests/Pods-Hungry!-Hungry!UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hungry!-Hungry!UITests/Pods-Hungry!-Hungry!UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hungry!-Hungry!UITests/Pods-Hungry!-Hungry!UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F32254EB2FCA8FDC9FB9998A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hungry!Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEE3D08B4C9561601878D2DC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hungry!/Pods-Hungry!-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hungry!/Pods-Hungry!-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hungry!/Pods-Hungry!-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F74956CD29C76FAD009B8CA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C92C8C29C817CC00F4E424 /* ShadowView.swift in Sources */,
 				F749571429C78347009B8CA7 /* OnBoardingCollectionViewCell.swift in Sources */,
+				F7C92C8829C80D7000F4E424 /* DishCategory.swift in Sources */,
 				F74956D529C76FAD009B8CA7 /* AppDelegate.swift in Sources */,
 				F74956D729C76FAD009B8CA7 /* SceneDelegate.swift in Sources */,
 				F77419E329C7DC3500EB983B /* HomeViewController.swift in Sources */,
+				F7C184C429C8D9B40060617D /* UICollectionView+extension.swift in Sources */,
+				F7C92C8A29C80E0500F4E424 /* String+extension.swift in Sources */,
+				F7C184CD29C909E60060617D /* ChefCollectionViewCell.swift in Sources */,
+				F7C92C8329C8096500F4E424 /* CategoryCollectionViewCell.swift in Sources */,
+				F7C184C229C8D55A0060617D /* HomeViewModel.swift in Sources */,
 				F749570A29C77EE8009B8CA7 /* UIView+extension.swift in Sources */,
 				F749571029C78131009B8CA7 /* OnBoardingViewModel.swift in Sources */,
+				F7C184C729C8DE9D0060617D /* PopularCollectionViewCell.swift in Sources */,
+				F7C184CA29C8E4F20060617D /* Dish.swift in Sources */,
 				F749570629C777C4009B8CA7 /* OnBoardingViewController.swift in Sources */,
 				F749570D29C78051009B8CA7 /* OnBoardingSlide.swift in Sources */,
 			);
@@ -316,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7C92C8529C8097500F4E424 /* CategoryCollectionViewCell.swift in Sources */,
 				F749570E29C78051009B8CA7 /* OnBoardingSlide.swift in Sources */,
 				F749570B29C77EE8009B8CA7 /* UIView+extension.swift in Sources */,
 				F749571129C78131009B8CA7 /* OnBoardingViewModel.swift in Sources */,
@@ -486,6 +756,7 @@
 		};
 		F74956FC29C76FAF009B8CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E91AED09EB676FB3F82E467B /* Pods-Hungry!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -514,6 +785,7 @@
 		};
 		F74956FD29C76FAF009B8CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74AF1CC0884A15602EE84CD1 /* Pods-Hungry!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -542,6 +814,7 @@
 		};
 		F74956FF29C76FAF009B8CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7717E254FB5AA5D9B94708E /* Pods-Hungry!Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -562,6 +835,7 @@
 		};
 		F749570029C76FAF009B8CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45634BE8BB38886E1C199451 /* Pods-Hungry!Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -582,6 +856,7 @@
 		};
 		F749570229C76FAF009B8CA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0527FCB08790E9FB3D11476A /* Pods-Hungry!-Hungry!UITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -600,6 +875,7 @@
 		};
 		F749570329C76FAF009B8CA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE02F8701F45AB11480BEBB /* Pods-Hungry!-Hungry!UITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
