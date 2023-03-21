@@ -131,5 +131,13 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         default: return 0
         }
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView == categoryCollectionView{
+            
+        }else{
+            let VC = DetailsViewController.instantiate()
+            navigationController?.pushViewController(VC, animated: true)
+        }
+    }
     
 }

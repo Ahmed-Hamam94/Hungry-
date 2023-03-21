@@ -8,7 +8,13 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-
+    @IBOutlet weak var dishImg: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var caloriesLbl: UILabel!
+    
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var orderTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
