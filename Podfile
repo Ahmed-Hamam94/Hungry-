@@ -7,6 +7,9 @@ target 'Hungry!' do
 
   # Pods for Hungry!
   pod 'Kingfisher'
+  pod "KRProgressHUD"
+  pod 'FirebaseAuth'
+pod 'FirebaseFirestore'
 
   target 'Hungry!Tests' do
     inherit! :search_paths

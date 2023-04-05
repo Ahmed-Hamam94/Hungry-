@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct DishCategory{
-    var name: String
-    var image: String
+struct DishCategory: Decodable{
+    let id: String
+    let title: String
+    let image: String
 }
+

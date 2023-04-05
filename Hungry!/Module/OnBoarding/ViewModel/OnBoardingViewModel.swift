@@ -8,7 +8,6 @@
 import Foundation
 
 class OnBoardingViewModel{
-   // let service : NetworkManager
     var bindingonBoardingSlide : (()->()) = {}
     var comingData : [onBoardingSlide]?
     

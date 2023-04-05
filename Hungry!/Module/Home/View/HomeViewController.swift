@@ -6,27 +6,32 @@
 //
 
 import UIKit
-
+import KRProgressHUD
 class HomeViewController: UIViewController {
-
+    
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     
     @IBOutlet weak var popularCollectionView: UICollectionView!
     
     @IBOutlet weak var chefCollectionView: UICollectionView!
     
+    
     var homeViewModel : HomeViewModel?
-
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         homeViewModel = HomeViewModel()
-setUpCollections()
+        setUpCollections()
         setUpCell()
+        homeCollectionsReload()
+        categoriesIsFinished()
     }
-
-
-    func setUpCollections(){
+    
+    
+    private func setUpCollections(){
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         popularCollectionView.delegate = self
@@ -34,14 +39,50 @@ setUpCollections()
         chefCollectionView.delegate = self
         chefCollectionView.dataSource = self
     }
-    func setUpCell(){
+    private func setUpCell(){
         categoryCollectionView.registerCelNib(cellClass: CategoryCollectionViewCell.self)
-//        categoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
-//        chefCollectionView.register(UINib(nibName: "ChefCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "ChefCollectionViewCell")
         popularCollectionView.registerCelNib(cellClass: PopularCollectionViewCell.self)
         chefCollectionView.registerCelNib(cellClass: ChefCollectionViewCell.self)
     }
-
+    
+    private func homeCollectionsReload(){
+        homeViewModel?.bindingCategories = { [weak self]  in
+            guard let self = self else {return}
+            DispatchQueue.main.async {
+                self.categoryCollectionView.reloadData()
+                self.popularCollectionView.reloadData()
+                self.chefCollectionView.reloadData()
+                
+            }
+        }
+    }
+    private func categoriesIsFinished(){
+        homeViewModel?.callFuncToGetCategories(completionHandler: { (isFinished) in
+            if isFinished == false{
+                KRProgressHUD.show()
+            }else {
+                KRProgressHUD.dismiss()
+            }
+            
+        })
+    }
+    
+    @IBAction func signInOutBtn(_ sender: UIBarButtonItem) {
+        guard let authVC = storyboard?.instantiateViewController(withIdentifier: "AuthViewController") as? AuthViewController else {return}
+        UserManager.logedUser = nil
+        print("\(UserManager.logedUser)")
+        self.present(authVC, animated: true)
+    }
+    @IBAction func cartBtn(_ sender: UIBarButtonItem) {
+        if UserManager.logedUser == nil {
+            AlertMsg.displayError(message: "Login first", vc: self)
+        }else{
+            let ordersVC = storyboard?.instantiateViewController(withIdentifier: "OrdersViewController") as! OrdersViewController
+            self.navigationController?.pushViewController(ordersVC, animated: true)
+        }
+        
+    }
+    
 }
 
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
@@ -66,6 +107,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             if let category = homeViewModel?.categories?[indexPath.row]{
                 categoryCell.setUp(category: category)
             }
+            
             return categoryCell
             
         case popularCollectionView:
@@ -87,7 +129,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         default: return UICollectionViewCell()
         }
         
-      
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -106,7 +148,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
         }
         
     }
-  
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         
         switch collectionView{
@@ -118,7 +160,7 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
             return 2
         default: return 0
         }
-       
+        
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         switch collectionView{
@@ -133,9 +175,24 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDataSou
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == categoryCollectionView{
-            
+            let VC = ListDishesViewController.instantiate()
+            VC.category = homeViewModel?.categories?[indexPath.row]
+            navigationController?.pushViewController(VC, animated: true)
         }else{
             let VC = DetailsViewController.instantiate()
+            switch collectionView{
+            case popularCollectionView:
+                
+                VC.dish = (homeViewModel?.popularDishes?[indexPath.row])
+                
+            case chefCollectionView:
+                
+                VC.dish = (homeViewModel?.chefSpecials?[indexPath.row])
+                
+            default:
+                print("error")
+            }
+            
             navigationController?.pushViewController(VC, animated: true)
         }
     }

@@ -35,12 +35,12 @@ class OnBoardingViewController: UIViewController {
         pageControl.numberOfPages = onBoardingViewModel?.comingData?.count ?? 0
     }
     
-    func setUpCollectionView(){
+   private func setUpCollectionView(){
         collectioView.delegate = self
         collectioView.dataSource = self
     }
     
-    func setUpCell(){
+   private func setUpCell(){
         self.collectioView.register(UINib(nibName: "OnBoardingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
     }
 

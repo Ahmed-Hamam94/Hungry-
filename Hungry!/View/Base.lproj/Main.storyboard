@@ -221,8 +221,18 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Hungry!" id="Luu-KL-opT">
+                        <barButtonItem key="backBarButtonItem" title=" " id="2x8-FL-NXc"/>
+                        <barButtonItem key="leftBarButtonItem" image="lock.circle" catalog="system" id="O8H-pe-cpH">
+                            <color key="tintColor" red="0.61647790670000002" green="0.08202069494" blue="0.073057775189999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="signInOutBtn:" destination="N29-h5-Fsv" id="VgI-aa-2H8"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="cart" catalog="system" id="4m1-P5-DNV">
                             <color key="tintColor" red="0.61647790670000002" green="0.08202069494" blue="0.073057775189999993" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="cartBtn:" destination="N29-h5-Fsv" id="EHg-8p-Aho"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -243,7 +253,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl8-OW-ShU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cl8-OW-ShU">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="651.66666666666663"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mSh-Cx-cad">
@@ -277,16 +287,30 @@
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2v-HW-Lgn">
                                         <rect key="frame" x="0.0" y="70" width="373" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="0Vn-IZ-e5S"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KF6-AA-kfx">
                                         <rect key="frame" x="0.0" y="111.99999999999999" width="373" height="34.333333333333329"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34.329999999999998" id="bWN-DG-GUq"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Order">
                                             <color key="baseForegroundColor" red="0.35294118520000001" green="0.76862752440000004" blue="0.74117654560000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="orderButton:" destination="f2A-Zi-OcX" eventType="touchUpInside" id="bDc-IW-haU"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -315,6 +339,114 @@
             </objects>
             <point key="canvasLocation" x="2673" y="-35"/>
         </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="b54-Df-af7">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="uBW-Lh-rjg" customClass="AuthViewController" customModule="Hungry_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qSz-tL-xlL">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xlI-FN-0uH">
+                                <rect key="frame" x="10" y="69" width="373" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="RRh-NN-zZx"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KZh-13-ShB">
+                                <rect key="frame" x="0.0" y="229" width="393" height="589"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wVr-ve-zUe">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pFO-Bg-FaP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KZh-13-ShB" firstAttribute="leading" secondItem="pFO-Bg-FaP" secondAttribute="leading" id="9Zk-n4-asP"/>
+                            <constraint firstItem="xlI-FN-0uH" firstAttribute="top" secondItem="pFO-Bg-FaP" secondAttribute="top" constant="10" id="V5F-Ah-jju"/>
+                            <constraint firstItem="xlI-FN-0uH" firstAttribute="leading" secondItem="pFO-Bg-FaP" secondAttribute="leading" constant="10" id="bPr-zH-lSl"/>
+                            <constraint firstItem="pFO-Bg-FaP" firstAttribute="trailing" secondItem="xlI-FN-0uH" secondAttribute="trailing" constant="10" id="g2P-md-mXZ"/>
+                            <constraint firstItem="pFO-Bg-FaP" firstAttribute="trailing" secondItem="KZh-13-ShB" secondAttribute="trailing" id="lZ8-bA-hoF"/>
+                            <constraint firstItem="pFO-Bg-FaP" firstAttribute="bottom" secondItem="KZh-13-ShB" secondAttribute="bottom" id="wX6-L6-5Gt"/>
+                            <constraint firstItem="KZh-13-ShB" firstAttribute="top" secondItem="xlI-FN-0uH" secondAttribute="bottom" constant="10" id="wpx-wJ-wNj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="logImage" destination="xlI-FN-0uH" id="POi-cy-yNf"/>
+                        <outlet property="signCollectionView" destination="KZh-13-ShB" id="FR6-cw-pfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bfd-5N-0Bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142.7480916030534" y="667.6056338028169"/>
+        </scene>
+        <!--Orders View Controller-->
+        <scene sceneID="ibe-pH-3FA">
+            <objects>
+                <viewController storyboardIdentifier="OrdersViewController" modalPresentationStyle="fullScreen" id="IHT-Nt-II5" customClass="OrdersViewController" customModule="Hungry_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jwh-yQ-ZG1">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="he9-rl-qtT">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rYg-Pn-uaJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="he9-rl-qtT" firstAttribute="top" secondItem="rYg-Pn-uaJ" secondAttribute="top" id="2Ji-AM-TLs"/>
+                            <constraint firstItem="rYg-Pn-uaJ" firstAttribute="bottom" secondItem="he9-rl-qtT" secondAttribute="bottom" id="HeN-JZ-sHE"/>
+                            <constraint firstItem="rYg-Pn-uaJ" firstAttribute="trailing" secondItem="he9-rl-qtT" secondAttribute="trailing" id="mc7-Ww-OTz"/>
+                            <constraint firstItem="he9-rl-qtT" firstAttribute="leading" secondItem="rYg-Pn-uaJ" secondAttribute="leading" id="wlM-Jg-gT9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6bz-Px-0HP"/>
+                    <connections>
+                        <outlet property="ordersTableView" destination="he9-rl-qtT" id="rAF-G5-xqE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBH-0y-eA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1934" y="668"/>
+        </scene>
+        <!--List Dishes View Controller-->
+        <scene sceneID="Tkl-4h-x3O">
+            <objects>
+                <viewController storyboardIdentifier="ListDishesViewController" id="GaZ-Eb-R2C" customClass="ListDishesViewController" customModule="Hungry_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pcy-te-Ki6">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="P4r-fJ-Hku">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HKb-6j-M3g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HKb-6j-M3g" firstAttribute="bottom" secondItem="P4r-fJ-Hku" secondAttribute="bottom" id="0Nm-qA-LLP"/>
+                            <constraint firstItem="P4r-fJ-Hku" firstAttribute="leading" secondItem="HKb-6j-M3g" secondAttribute="leading" id="9UT-Ya-1LW"/>
+                            <constraint firstItem="HKb-6j-M3g" firstAttribute="trailing" secondItem="P4r-fJ-Hku" secondAttribute="trailing" id="SMH-Zq-8rK"/>
+                            <constraint firstItem="P4r-fJ-Hku" firstAttribute="top" secondItem="HKb-6j-M3g" secondAttribute="top" id="TM2-U0-aYs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listDishesTableView" destination="P4r-fJ-Hku" id="0Yy-g8-J66"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CdD-ym-zCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2673" y="649"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cev-nL-7xN">
             <objects>
@@ -336,6 +468,7 @@
     </scenes>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
+        <image name="lock.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

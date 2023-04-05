@@ -17,8 +17,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setUp(category: DishCategory){
-        categoryTitleLbl.text = category.name
+        categoryTitleLbl.text = category.title
         categoryImg.kf.setImage(with: category.image.asUrl)
+    }
+    
+    func setUpCat(category: BrowsCategories){
+        categoryTitleLbl.text = category.display.displayName
+        categoryImg.kf.setImage(with: category.display.categoryImage?.asUrl)
     }
 }
 
