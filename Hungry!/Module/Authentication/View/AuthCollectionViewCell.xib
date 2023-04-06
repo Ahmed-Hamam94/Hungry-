@@ -39,24 +39,43 @@
                                             <constraint firstAttribute="bottom" secondItem="vh7-z3-5bu" secondAttribute="bottom" id="lhd-bT-rpy"/>
                                             <constraint firstItem="vh7-z3-5bu" firstAttribute="top" secondItem="Rsz-Iy-eBc" secondAttribute="top" id="vL2-jf-AOq"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IEN-J5-1Om">
                                         <rect key="frame" x="0.0" y="85" width="437" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B0-IF-ujP">
-                                                <rect key="frame" x="10" y="0.0" width="417" height="40"/>
+                                                <rect key="frame" x="10" y="0.0" width="360" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="open" translatesAutoresizingMaskIntoConstraints="NO" id="dhV-oj-3Yd">
+                                                <rect key="frame" x="380" y="0.0" width="52" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52" id="dTm-On-o1Y"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray2Color"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="0B0-IF-ujP" secondAttribute="bottom" id="PsA-7C-UQx"/>
                                             <constraint firstItem="0B0-IF-ujP" firstAttribute="leading" secondItem="IEN-J5-1Om" secondAttribute="leading" constant="10" id="R8D-4K-iqN"/>
-                                            <constraint firstAttribute="trailing" secondItem="0B0-IF-ujP" secondAttribute="trailing" constant="10" id="jf4-6k-SCH"/>
+                                            <constraint firstAttribute="bottom" secondItem="dhV-oj-3Yd" secondAttribute="bottom" id="Vwp-ry-pKY"/>
+                                            <constraint firstAttribute="trailing" secondItem="dhV-oj-3Yd" secondAttribute="trailing" constant="5" id="ZUc-9Y-mUj"/>
+                                            <constraint firstItem="dhV-oj-3Yd" firstAttribute="leading" secondItem="0B0-IF-ujP" secondAttribute="trailing" constant="10" id="p2x-yN-d5d"/>
                                             <constraint firstItem="0B0-IF-ujP" firstAttribute="top" secondItem="IEN-J5-1Om" secondAttribute="top" id="wna-Xt-Tmj"/>
+                                            <constraint firstItem="dhV-oj-3Yd" firstAttribute="top" secondItem="IEN-J5-1Om" secondAttribute="top" id="x0J-Zt-hhl"/>
                                             <constraint firstAttribute="height" constant="40" id="xie-Ll-mDP"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -110,6 +129,7 @@
             <connections>
                 <outlet property="actionBtn" destination="fQD-Pb-DGD" id="sg6-CG-wKc"/>
                 <outlet property="emailTxt" destination="vh7-z3-5bu" id="c46-WR-2EE"/>
+                <outlet property="passwordImg" destination="dhV-oj-3Yd" id="70H-Lg-SWy"/>
                 <outlet property="passwordTxt" destination="0B0-IF-ujP" id="pfG-yF-87q"/>
                 <outlet property="slideBtn" destination="cmh-XQ-qch" id="Mqy-dF-yqm"/>
             </connections>
@@ -117,6 +137,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="open" width="512" height="512"/>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -119,8 +119,9 @@ class NetworkManager: CategoryProvider,OrderProvider,CategoryDishesProvider,Orde
             } else {
                 completion(.failure(APIError.unknownError))
             }
-        case .failure(let error):
-            completion(.failure(error as! APIError))
+        case .failure(let error): break
+//            completion(.failure(error as! APIError))
+           // completion(.failure((error as NSError) as! APIError ))
         }
     }
     

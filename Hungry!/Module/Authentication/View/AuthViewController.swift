@@ -14,7 +14,7 @@ class AuthViewController: UIViewController {
     @IBOutlet weak var logImage: UIImageView!
     
     @IBOutlet weak var signCollectionView: UICollectionView!
-    
+    var iconClick = false
     var authViewModel : AuthViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,13 +46,34 @@ extension AuthViewController : UICollectionViewDelegate,UICollectionViewDataSour
             cell.setSignUpCell()
             cell.actionBtn.addTarget(self, action: #selector(signUpPressed(_ :)), for: .touchUpInside)
             cell.slideBtn.addTarget(self, action: #selector(goLogIn(_ :)), for: .touchUpInside)
+            cell.passwordImg.isHidden = true
+            cell.passwordImg.isUserInteractionEnabled = false
+
         }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGesture:)))
+     
+        cell.passwordImg.isUserInteractionEnabled = true
+        cell.passwordImg.addGestureRecognizer(tapGesture)
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    @objc func imageTapped(tapGesture: UITapGestureRecognizer){
+        let tappedImg = tapGesture.view as! UIImageView
+        let indexPath = IndexPath(row: 0, section: 0)
+        guard let cell = self.signCollectionView.cellForItem(at: indexPath) as? AuthCollectionViewCell else {return}
+        if iconClick {
+            iconClick = false
+            tappedImg.image = UIImage(named: "open")
+            cell.passwordTxt.isSecureTextEntry = false
+        }else{
+            iconClick = true
+            tappedImg.image = UIImage(named: "close")
+            cell.passwordTxt.isSecureTextEntry = true
+        }
     }
     
     @objc func goSignUp(_ sender: UIButton){

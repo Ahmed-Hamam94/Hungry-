@@ -10,6 +10,8 @@ target 'Hungry!' do
   pod "KRProgressHUD"
   pod 'FirebaseAuth'
 pod 'FirebaseFirestore'
+pod 'ReachabilitySwift'
+pod 'IQKeyboardManagerSwift'
 
   target 'Hungry!Tests' do
     inherit! :search_paths

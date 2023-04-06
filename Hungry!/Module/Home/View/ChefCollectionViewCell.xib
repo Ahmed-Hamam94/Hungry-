@@ -18,36 +18,35 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhq-pR-9Co" customClass="ShadowView" customModule="Hungry_" customModuleProvider="target">
-                        <rect key="frame" x="5" y="0.0" width="291" height="100"/>
+                        <rect key="frame" x="8" y="5" width="285" height="90"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="xk0-Lb-Nqx">
-                                <rect key="frame" x="91" y="9" width="192" height="83"/>
+                                <rect key="frame" x="91" y="9" width="186" height="73"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-qU-IPp">
-                                        <rect key="frame" x="0.0" y="0.0" width="192" height="24.333333333333332"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfG-qU-IPp">
+                                        <rect key="frame" x="0.0" y="0.0" width="186" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-cn-bUZ">
-                                        <rect key="frame" x="0.0" y="29.333333333333336" width="192" height="24.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7E6-cn-bUZ">
+                                        <rect key="frame" x="0.0" y="26" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kq-W5-aIV">
-                                        <rect key="frame" x="0.0" y="58.666666666666679" width="192" height="24.333333333333336"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <color key="textColor" systemColor="systemGray2Color"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kq-W5-aIV">
+                                        <rect key="frame" x="0.0" y="52" width="186" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZCd-QG-cXC">
-                                <rect key="frame" x="8" y="9" width="75" height="83"/>
+                                <rect key="frame" x="8" y="9" width="75" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="F5N-bs-WfQ"/>
-                                    <constraint firstAttribute="height" constant="83" id="rPT-by-YtE"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -71,10 +70,10 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="dhq-pR-9Co" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="8C7-TJ-fYI"/>
-                <constraint firstAttribute="bottom" secondItem="dhq-pR-9Co" secondAttribute="bottom" id="ity-Em-p6K"/>
-                <constraint firstAttribute="trailing" secondItem="dhq-pR-9Co" secondAttribute="trailing" constant="5" id="kew-WV-LbQ"/>
-                <constraint firstItem="dhq-pR-9Co" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rVL-qr-H8T"/>
+                <constraint firstItem="dhq-pR-9Co" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="8C7-TJ-fYI"/>
+                <constraint firstAttribute="bottom" secondItem="dhq-pR-9Co" secondAttribute="bottom" constant="5" id="ity-Em-p6K"/>
+                <constraint firstAttribute="trailing" secondItem="dhq-pR-9Co" secondAttribute="trailing" constant="8" id="kew-WV-LbQ"/>
+                <constraint firstItem="dhq-pR-9Co" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="rVL-qr-H8T"/>
             </constraints>
             <size key="customSize" width="301" height="100"/>
             <connections>
@@ -90,8 +89,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

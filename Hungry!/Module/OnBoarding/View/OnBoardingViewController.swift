@@ -48,6 +48,7 @@ class OnBoardingViewController: UIViewController {
         guard let onBoardingArray = onBoardingViewModel?.comingData else{return}
         if currentPage == onBoardingArray.count - 1 {
             let VC = storyboard?.instantiateViewController(withIdentifier: "Home") as! UINavigationController
+            UserDefaults.standard.hasOnBoarded = true
             present(VC, animated: true)
         }else{
            currentPage += 1

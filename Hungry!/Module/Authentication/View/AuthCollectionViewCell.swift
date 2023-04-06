@@ -12,6 +12,7 @@ class AuthCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var passwordTxt: UITextField!
     
+    @IBOutlet weak var passwordImg: UIImageView!
     @IBOutlet weak var actionBtn: UIButton!
     
     @IBOutlet weak var slideBtn: UIButton!
@@ -21,7 +22,7 @@ class AuthCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     func setSignInCell(){
-      
+        
         actionBtn.setTitle("Login", for: .normal)
         slideBtn.setTitle("Sign Up", for: .normal)
     }
@@ -29,6 +30,5 @@ class AuthCollectionViewCell: UICollectionViewCell {
         actionBtn.setTitle("Sign Up", for: .normal)
         slideBtn.setTitle("Sign In", for: .normal)
     }
-    
-    
+
 }
